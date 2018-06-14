@@ -1,0 +1,291 @@
+body {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+}
+h4 {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.houseInfo {
+  display: inline-block;
+  width: 320px;
+  padding: 10px;
+  border: 5px;
+  margin: 0;
+  font-size:16px;
+  box-sizing: border-box;
+  color: #484848;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+.allhouseinfo {
+  padding-top: 16px;
+  margin-top: 35px;
+  margin-bottom: 24px;
+  border-bottom : 1px solid #DBDBDB;
+  border-top: 1px solid #DBDBDB;;
+}
+.title {
+  font-size: 25px;
+  line-height:30px;
+  margin-right: 6px;
+  color: #484848;
+  margin-top:20px;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  padding-left : 10px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.houseInfo_category {
+  margin-bottom:12px;
+}
+.userName {
+  font-size: 14px;
+  color:  #484848 ;
+  font-weight: 400;
+}
+
+.star {
+  font-size:18px;
+  color: #008489;
+  height:1em ;
+  width:1em ;
+  display:inline-block;
+  fill:currentColor;
+}
+.starSpan {
+  padding-left: 6.5px ;
+  height:2em ;
+  position: relative ;
+  width: 50% ;
+
+}
+#serachIcon {
+  height:1em ;
+  width:1em ;
+  display:block;
+  float: left ;
+  padding-top: 7px ;
+  padding-bottom: 0px ;
+  padding-left : 8px;
+}
+#searchBox {
+  border-width: 1px ;
+  border-style: solid ;
+  border-color: #008489 ;
+  border-radius: 2.5px ;
+  margin-top:18px;
+  margin-bottom: 8px;
+  line-height: 18px;
+  font-size:14px;
+  padding-left: 8px ;
+  padding-right: 8px ;
+  min-height: 1px ;
+  position: relative ;
+  display:block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  color: #484848 ;
+  width:30%;
+  float: right;
+}
+.clearSearchFloat {
+  clear: both;
+}
+#input {
+  display:table-cell ;
+  position: relative ;
+  vertical-align: bottom ;
+  font-size: 14px ;
+  line-height: 18px ;
+  width:80%;
+  border: 0px;
+  font-weight: 600 ;
+  padding: 7px ;
+}
+.photodiv {
+  float: left;
+}
+.userPhoto {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  display: block;
+  position:relative;
+
+}
+.flag {
+  height: 15px;
+  width: 15px;
+  display: block;
+  float: right;
+}
+.name_date {
+  float:left;
+  padding-left : 8px ;
+}
+.userName {
+  float:left;
+  padding-left : 8px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.date {
+  float:left;
+  position:relative;
+  padding-left : 8px;
+  font-weight: 400px;
+}
+
+.comment {
+  padding-top: 8px;
+  clear: left;
+  font-size: 16px;
+  font-weight: 200px;
+  color: #484848;
+}
+.review_star {
+  clear: both;
+  padding-top: 4px;
+  margin-top: 12px;
+  position: relative;
+
+}
+.pageBtn {
+  border-style:solid;
+  float:left;
+  border: #484848;
+  display: inline-block;
+  padding: 8px 16px;
+  height: 30px;
+  width: 30px;
+}
+.btnBorder {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  line-height: 10px;
+  padding: 6px ;
+  border: 1px solid #484848;
+  border-radius: 3px;
+  padding-left: 6.5px;
+  margin-right: 6px;
+}
+a  {
+  color :  #008489;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+.caret {
+  box-sizing: border-box;
+  border-bottom: 4px;
+}
+.caretBorder {
+  line-height: 10px;
+  border-radius: 3px;
+  padding: 6px ;
+  margin-right: 6px;
+  padding-left: 6.5px;
+  padding-top: 4px;
+  padding-bottom: 3.5px;
+  border: 1px solid #484848;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+}
+
+.reviewDiv, #searchSummaryDiv {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding:4px;
+  border-bottom: 1px solid #DBDBDB;;
+}
+#summary {
+  font-size:1rem;
+  margin-bottom: 14px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+.modal {
+ /* Hidden by default   display: none; */
+ display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  box-sizing: border-box;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalContent {
+  display: block;
+  width: 35%;
+  box-sizing: border-box;
+  margin:auto;
+  padding: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.close {
+  height: 12px; width: 12px; display: block; fill: rgb(118, 118, 118);
+}
+
+.description {
+  font-size:15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.reasonTitle {
+  font-size: 15px;
+}
+.reason {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 23px;
+  font-size: 13px;
+}
+
+.flog {
+  height: 1em; width: 1em; display: block; fill: rgb(118, 118, 118);
+}
+
+.submitBtn {
+  height: 30px;
+  width:80px;
+  margin-top: 20px;
+  border-radius: 4px;
+  opacity: 0.5;
+  background: rgb(0, 132, 137);
+}
+.submitBtn {
+  padding-top:10px;
+  padding: 20px,12px;
+  color: white;
+  text-align: center;
+}
+
+#searchWord {
+
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-weight: 600;
+}
+
+#back {
+  background-color: white;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  color: rgb(0, 132, 137);
+  float:right;
+  border: none;
+  font-size: 1rem;
+}
+
+
