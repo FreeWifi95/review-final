@@ -97,7 +97,7 @@ class App extends React.Component {
   }
 
   filter() {
-    const word = this.state.searchWord;
+    const word = this.state.searchWord.trim();
     const Arr = this.state.reviewList.map(review => review.comment);
     const index = Arr.map((review) => {
       if (review.split(' ').includes(word)) {

@@ -13,7 +13,7 @@ class Filtered extends React.Component {
 
   render() {
     const length = this.props.reviewList.length;
-    const word = this.props.word;
+    const word = this.props.word.trim();
     return (
       <div>
         <div id={styles.searchSummaryDiv}>
