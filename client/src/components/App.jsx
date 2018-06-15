@@ -30,7 +30,6 @@ class App extends React.Component {
     this.handleCloseClick = this.handleCloseClick.bind(this);
     this.handlePageNumChange = this.handlePageNumChange.bind(this);
     this.handleFlagClick = this.handleFlagClick.bind(this);
-  //  this.getTargetUser = this.getTargetUser.bind(this);
     this.handleForwardCaretClick = this.handleForwardCaretClick.bind(this);
     this.handleBackwardCaretClick = this.handleBackwardCaretClick.bind(this);
   }
@@ -120,9 +119,6 @@ class App extends React.Component {
   handlePageNumChange(num) {
     this.setState({ pageNum: num });
     this.setState({ renderReviewList: this.state.reviewList.slice(0).splice(num * 7 - 7, 7) });
-    this.state.renderReviewList.forEach((review) => {
-      this.getTargetUser(review.user_id);
-    });
   }
   handleBackClick() {
     this.setState({ searchWord: '' });
