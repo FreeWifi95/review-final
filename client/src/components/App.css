@@ -103,7 +103,7 @@ h4 {
   vertical-align: bottom ;
   font-size: 14px ;
   line-height: 18px ;
-  width:80%;
+  width:46%;
   border: 0px;
   font-weight: 600 ;
   padding: 7px ;
@@ -179,6 +179,7 @@ h4 {
 }
 a  {
   color :  #008489;
+  text-decoration: none;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 .caret {
