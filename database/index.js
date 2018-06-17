@@ -1,12 +1,8 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  //delete below "password : '0000' "
-  password: '0000',
-  database: 'Review',
-});
+const config = require('./config.js');
+const connection = mysql.createConnection(config);
+
 
 connection.connect();
 

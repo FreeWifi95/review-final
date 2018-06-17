@@ -4,7 +4,9 @@ const dataGenerator = require('../database/dataGenerator.js');
 const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 
+const port = process.env.PORT || 3007;
 const app = express();
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(bodyParser.json());
@@ -61,4 +63,4 @@ app.get('/user/:userId', (req, res) => {
   });
 });
 
-app.listen(3007, () => console.log('Example app listening on port 3007!'));
+app.listen(port, () => console.log(`app listening on port ${port}!`));

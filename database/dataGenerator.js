@@ -1,15 +1,8 @@
 const faker = require('faker');
 
 const mysql = require('mysql');
-
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  //delete "password : '0000' "
-  password: '0000',
-  dateStrings: true,
-  database: 'Review',
-});
+const config = require('./config.js');
+const connection = mysql.createConnection(config);
 
 connection.connect();
 
