@@ -10,7 +10,8 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "prestart": "node server/seedDatabase.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
