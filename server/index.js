@@ -13,7 +13,7 @@ const app = express();
 app.use('/:id', express.static(path.join(__dirname, '../public')));
 
 app.use(bodyParser.json());
-
+//using script, seed data
 app.get('/generate-data', (/* req, res */) => {
   dataGenerator.houseInsertToDb();
   dataGenerator.userInsertToDb();
