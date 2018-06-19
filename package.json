@@ -9,14 +9,13 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
-    "start": "node server/index.js",
-    "prestart": "node server/seedDatabase.js"
+    "start": "node server/index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "faker": "^4.1.0",

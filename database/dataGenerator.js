@@ -6,6 +6,23 @@ const connection = mysql.createConnection(config);
 
 connection.connect();
 
+const findOrCreate = (tableName, id, cb, cbArg) => {
+  const q = `SELECT * from ${tableName} where id = ${id}`;
+  const recordExists = results => (results && results.length > 0);
+
+  connection.query(q, (error, results) => {
+    if (error) {
+      console.error(error);
+    } else {
+      if (recordExists(results)) {
+        console.log(`${id} from ${tableName} already exists.`);
+      } else {
+        cb(cbArg);
+      }
+    }
+  });
+};
+
 const userInsert = (data) => {
   const q = `INSERT INTO Users (id,user_name,photo) VALUES(${data.id},"${data.user_name}","${data.photo}")`;
   connection.query(q, (error, results) => {
@@ -27,8 +44,7 @@ const UserData = (id) => {
 const userInsertToDb = () => {
   let count = 1;
   while (count < 36) {
-    const dataObj = UserData(count);
-    userInsert(dataObj);
+    findOrCreate('Users', count, userInsert, UserData(count));
     count += 1;
   }
 };
@@ -81,8 +97,7 @@ const houseData = (id) => {
 const houseInsertToDb = () => {
   let count = 0;
   while (count < 100) {
-    const dataObj = houseData(count);
-    houseInsert(dataObj);
+    findOrCreate('Houses', count, houseInsert, houseData(count));
     count += 1;
   }
 };
@@ -161,9 +176,12 @@ const makeData = (id) => {
 
 const totalData = () => {
   for (let i = 1; i < 2501; i += 1) {
-    insert(makeData(i));
+    findOrCreate('Reviews', i, insert, makeData(i));
   }
 };
 
-
-module.exports = { totalData, houseInsertToDb, userInsertToDb };
+module.exports = {
+  totalData,
+  houseInsertToDb,
+  userInsertToDb,
+};

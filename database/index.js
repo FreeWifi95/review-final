@@ -18,7 +18,7 @@ const insert = (data) => {
 };
 
 const getUserInfo = (cb) => {
-  const q = 'SELECT * FROM USERS';
+  const q = 'SELECT * FROM Users';
   connection.query(q, (error, results) => {
     if (error) {
       cb(error, null);
@@ -29,7 +29,7 @@ const getUserInfo = (cb) => {
 };
 
 const getHouseInfo = (param, cb) => {
-  const q = `SELECT * FROM houses WHERE id = ${param} ORDER BY id ASC`;
+  const q = `SELECT * FROM Houses WHERE id = ${param} ORDER BY id ASC`;
   connection.query(q, (error, results) => {
     if (error) {
       cb(error, null);
@@ -41,7 +41,7 @@ const getHouseInfo = (param, cb) => {
 
 const getReviewList = (param, cb) => {
 
-  const q = `SELECT * FROM reviews where house_id = ${param.id} ORDER BY created_at DESC limit 7 OFFSET ${(+param.number * 7) - 6}`;
+  const q = `SELECT * FROM Reviews where house_id = ${param.id} ORDER BY created_at DESC limit 7 OFFSET ${(+param.number * 7) - 6}`;
   connection.query(q, (error, results) => {
     if (error) {
       cb(error, null);
@@ -52,7 +52,7 @@ const getReviewList = (param, cb) => {
 };
 
 const getAllReviewList = (param, cb) => {
-  const q = `SELECT * FROM reviews where house_id = ${param.houseId} ORDER BY created_at DESC`;
+  const q = `SELECT * FROM Reviews where house_id = ${param.houseId} ORDER BY created_at DESC`;
   connection.query(q, (error, results) => {
     if (error) {
       cb(error, null);
@@ -63,7 +63,7 @@ const getAllReviewList = (param, cb) => {
 };
 
 const getTargetUser = (param, cb) => {
-  const q = `SELECT * FROM users where id = ${param}`;
+  const q = `SELECT * FROM Users where id = ${param}`;
   connection.query(q, (error, results) => {
     if (error) {
       cb(error, null);
@@ -72,7 +72,13 @@ const getTargetUser = (param, cb) => {
     }
   });
 };
+
 module.exports = {
-  insert, getUserInfo, getHouseInfo, getReviewList, getTargetUser, getAllReviewList,
+  insert,
+  getUserInfo,
+  getHouseInfo,
+  getReviewList,
+  getTargetUser,
+  getAllReviewList,
 };
 
