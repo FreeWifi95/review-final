@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -5,7 +7,7 @@ const bodyParser = require('body-parser');
 const dataGenerator = require('../database/dataGenerator.js');
 const db = require('../database/index.js');
 
-const port = process.env.PORT || 3007;
+const port = process.env.PORT;
 const app = express();
 
 app.use('/:id', express.static(path.join(__dirname, '../public')));
