@@ -1,7 +1,7 @@
 # Project Name
 
 > Project description
-!!!!!!!!! To genterate data,
+ To genterate data,
 enter '/generate-data'
 
 ex) localhost://3000/generate-data
